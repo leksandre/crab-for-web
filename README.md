@@ -1,14 +1,5 @@
 
 
-
-
-
-
-
-
-
-
-
 function loadScript(url, callback)
 {
     var head = document.head;
@@ -42,7 +33,7 @@ function scrollFunction() {
 
     if (!active) {
       active = true;
-      for (let i = 1; i < 500; i++) { 
+      for (let i = 146; i < 500; i++) { 
         if(writer.includes(i)) {continue;}
         var canvas = document.getElementById("page_"+i );
         if(canvas){
@@ -126,7 +117,6 @@ window.onscroll = scrollFunction;
 
 
 let timerId = setInterval(window.scrollTo(window.scrollX+100, window.scrollY),2000);
-
 
 
 
