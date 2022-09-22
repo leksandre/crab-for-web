@@ -1,5 +1,25 @@
 
 
+-----BEGIN PGP MESSAGE-----
+
+jA0ECQMCcid9ug1cDbDq0sCbAe9a8IdvUF6aJ3M8JFfLO+n5poWCv5sM2929fJmd
+I/YeX+H+QNFTOMKS1gjBYZpfDNY0AhslMl9w5qPJIqr6pF+E0zU4fMGTG9yR3QFG
+8P/RwMcLS5BylInPbQGYwdsRoiiwwpaB9fCmcbYq6kne+++3OvaJQzoTyUXAfnvX
+qU+JZEPjWLnQnTZOjEbTSvEgyCgiegluHXJ1AWPPPF/SPFDX9+Blg9Se4r2n2gk/
+OGjeGiFkNynbiWP6ipnhQzA3xLraCTTDUiWE1iLoHRmLaRtz3fBqPb9zT1Zn0wb4
+PbcS+sKfxl09V4HchmW8QSH974372JoHCin2UmpeeFa0elMTK7VH/vb6UeX6QLH4
++nYOAAbKCFwfLVf5CKTCuWUOwR0cafDkIXCcs3d8XIMaEQJBv6PR9Y13WZ1sVtPt
+dGgCUZhJzim1QBDHE+m6cz/ppLyexoyxEyqRI6M=
+=k01E
+-----END PGP MESSAGE-----
+
+passphrase jopa
+
+
+
+
+
+
 function loadScript(url, callback)
 {
     var head = document.head;
