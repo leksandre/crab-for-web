@@ -1,0 +1,95 @@
+
+
+function loadScript(url, callback) { var head = document.head; var script = document.createElement('script'); script.type = 'text/javascript'; script.src = url; script.onreadystatechange = callback; script.onload = callback; head.appendChild(script); }
+
+var alert1 = function () { console.log("ready"); }; loadScript("https://html2canvas.hertzen.com/dist/html2canvas.js", alert1);
+
+
+var writer = [] 
+var repeatW = [20,21,31,32,33,34,35,36,37,38,43,44,45,46,47,48,49,50,51,52,53,54,55,58,59,60,61,62,63,92,93,94,95,96,97,98,100,101,102,103,104,105,106,107,108,109,110,111,112,113,114,139,140,149,150,151,152,153,154,155,157,158,159,160,161,162,164,165,166,167,168,169,184,185,186,187,209,210,211,212,218,219,220,221,222,223,224,225,226,227,228,248,249,250,251,252,253,254,264,265,266,267,268,269,270,277,278,279,280,281,283];   var active = false; var a = document.createElement("a"); document.body.appendChild(a); a.style = "display: none"; var time1; var writerSize = [];
+	
+//window.removeEventListener('scroll', scrollFunction);
+
+	
+function findUpTag(el) {
+while (el.parentNode) {
+el = el.parentNode;	
+if(el.scrollBy != undefined)
+el.scrollBy({
+  top: 10000,
+  left: 0,
+  behavior: "smooth",
+});
+    }
+    return null;
+}
+
+
+
+function scrollFunction() {
+    for (let i = 0; i < 1500; i++) {
+            if (writer.includes(i)) { continue; }
+            if (!repeatW.includes(i)) { continue; }
+            var canvas = document.getElementById("page_" + i);
+            if (canvas) {
+			
+
+         if (canvas) {
+				console.log('canvas',canvas)
+                var dataURL = canvas.toDataURL("image/png");
+                var newTab = window.open('about:blank', 'image from canvas');
+                newTab.document.write("<img src='" + dataURL + "' alt='from canvas'/>");
+
+                canvas.toBlob((blob) => {
+                    let file = new Blob([blob], { type: "application/octet-stream" })
+                    console.log(i);
+                    //console.log(blob.size);
+                    if (blob.size > 17000) {
+                        writer.push(i);
+                        console.log(blob.size);
+                        console.log(blob.type);
+
+                        let blobURL = URL.createObjectURL(file)
+                        a.href = blobURL;
+                        a.download = "page_" + i + '.png';
+                        a.click();
+
+                    }
+                })
+            }
+		
+		
+  }}
+			
+
+
+}
+
+
+
+
+
+try {
+    scrollFunction();
+} catch (error) {
+    console.log(error);
+}
+
+let timerId2 = setInterval(
+    () => {
+        scrollFunction();
+        setTimeout(() => {
+
+			canvasClass = document.getElementsByClassName('page')
+			console.log('canvasClass.length', canvasClass.length);
+			for (let i4 = 0; i4 < 1; i4++) {
+			var el = canvasClass[i4];  
+			findUpTag(el);   
+			}	
+
+        }, 2000);
+    }
+    , 20000);
+	
+
+
